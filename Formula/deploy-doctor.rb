@@ -5,21 +5,21 @@
 class DeployDoctor < Formula
   desc "Diagnose container deploy readiness"
   homepage "https://github.com/navig-me/deploy-doctor"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/navig-me/deploy-doctor/releases/download/v0.1.4/deploy-doctor_0.1.4_darwin_amd64.tar.gz"
-      sha256 "3989cc5ec784fdb354b2fee131dab1f4a33bdc9d68bffbdf28558a103c07a2bb"
+      url "https://github.com/navig-me/deploy-doctor/releases/download/v0.1.5/deploy-doctor_0.1.5_darwin_amd64.tar.gz"
+      sha256 "378872bb91b9921cf41ee546ed95d8ed4088f8af6340ddc3839a73fa28742254"
 
       define_method(:install) do
         bin.install "deploy-doctor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/navig-me/deploy-doctor/releases/download/v0.1.4/deploy-doctor_0.1.4_darwin_arm64.tar.gz"
-      sha256 "2ed066b5472eb5d1b465e483e4188ae6cfe3645e732ce624df4187139ad33481"
+      url "https://github.com/navig-me/deploy-doctor/releases/download/v0.1.5/deploy-doctor_0.1.5_darwin_arm64.tar.gz"
+      sha256 "4d1164c2849ad17227f0bf71eb14f45afddde76b4e2361de8622e818c38bf843"
 
       define_method(:install) do
         bin.install "deploy-doctor"
@@ -29,15 +29,15 @@ class DeployDoctor < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/navig-me/deploy-doctor/releases/download/v0.1.4/deploy-doctor_0.1.4_linux_amd64.tar.gz"
-      sha256 "68ea4ea3fd5457b68ae15f41aa50391374eea236d8b17ad3cfebf8a5c5453887"
+      url "https://github.com/navig-me/deploy-doctor/releases/download/v0.1.5/deploy-doctor_0.1.5_linux_amd64.tar.gz"
+      sha256 "c0562b461c23a73e07fe8adaf9e2cc40a669ad3f70c08453baf098f02e3fcabb"
       define_method(:install) do
         bin.install "deploy-doctor"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/navig-me/deploy-doctor/releases/download/v0.1.4/deploy-doctor_0.1.4_linux_arm64.tar.gz"
-      sha256 "ae310176f27ffed9767adcc436a44cfcaa6b19bad9df0bac2bf2e3f83b973109"
+      url "https://github.com/navig-me/deploy-doctor/releases/download/v0.1.5/deploy-doctor_0.1.5_linux_arm64.tar.gz"
+      sha256 "891816173ccdbbaf94e33aa0c73bce0647041c03f1bbc6e1900eef9275676d41"
       define_method(:install) do
         bin.install "deploy-doctor"
       end
